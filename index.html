@@ -289,16 +289,6 @@
       margin: 0;
     }
 
-    .disclaimer {
-      margin-top: 1.5rem;
-      padding: 0.85rem 1rem;
-      border-left: 3px solid var(--teal);
-      background: var(--bg-soft);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
     /* Phone / placeholder card */
     .device-card {
       background: var(--bg-elevated);
@@ -642,6 +632,63 @@
       margin-bottom: 0.65rem;
     }
 
+
+    /* Testeurs / Google Form */
+    .testeurs-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.25rem;
+      overflow: hidden;
+    }
+
+    .testeurs-intro {
+      max-width: 40rem;
+      margin: 0 0 1.25rem;
+      color: var(--text-muted);
+    }
+
+    .testeurs-intro strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .testeurs-note {
+      margin: 0 0 1.25rem;
+      padding: 0.85rem 1rem;
+      border-left: 3px solid var(--teal);
+      background: var(--bg-soft);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .form-frame-wrap {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .form-frame {
+      display: block;
+      width: 100%;
+      min-height: 1200px;
+      height: 1200px;
+      border: 0;
+      background: transparent;
+    }
+
+    .form-fallback {
+      margin: 1rem 0 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .alt .testeurs-card { background: var(--bg); }
+
     /* FAQ */
     .faq {
       display: grid;
@@ -763,6 +810,7 @@
         <a href="#fonctionnement">Fonctionnement</a>
         <a href="#compteur">Compteur</a>
         <a href="#offres">Offres</a>
+        <a href="#testeurs">Devenir testeur</a>
         <a href="#faq">FAQ</a>
       </nav>
       <div class="header-actions">
@@ -774,7 +822,7 @@
             <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/>
           </svg>
         </button>
-        <a class="btn btn-primary" href="#telechargement">Télécharger</a>
+        <a class="btn btn-primary" href="#testeurs">Devenir testeur</a>
       </div>
     </div>
   </header>
@@ -787,7 +835,7 @@
           <p class="eyebrow">Pour chauffeurs indépendants</p>
           <h1 id="hero-title">Suis ta course. Affiche le tarif. Garde la trace.</h1>
           <p class="lead">
-            Tacometer est un compteur mobile&nbsp;: distance GPS, tarif au km et au temps lent, pause, historique, PDF et CSV — sans carte intégrée, sans complexité.
+            Tacometer est un compteur mobile&nbsp;: distance GPS, tarif au km et au temps lent, pause, historique, PDF et CSV — simple et clair pour tes courses.
           </p>
           <div class="store-row" id="telechargement">
             <a class="btn btn-store" href="#" aria-label="Télécharger sur l’App Store (lien à venir)">
@@ -799,10 +847,10 @@
               <span><small>Bientôt sur</small><strong>Google Play</strong></span>
             </a>
           </div>
-          <p class="lang-note">Application disponible en français, anglais et espagnol (FR / EN / ES).</p>
-          <p class="disclaimer" role="note">
-            Tacometer est un outil de suivi pour chauffeurs indépendants. Ce n’est pas un appareil de mesure légale pour une activité réglementée.
+          <p style="margin:0 0 1.25rem;">
+            <a class="btn btn-primary" href="#testeurs">Devenir testeur</a>
           </p>
+          <p class="lang-note">Application disponible en français, anglais et espagnol (FR / EN / ES).</p>
         </div>
         <div class="device-card" aria-hidden="true">
           <div class="meter-preview">
@@ -831,7 +879,7 @@
           <article class="step">
             <div class="step-num" aria-hidden="true">1</div>
             <h3>Avant la course</h3>
-            <p>Saisis les adresses (départ optionnel = GPS), ton tarif ou un forfait, estime le trajet, puis ouvre Waze ou Maps — pas de carte dans l’app.</p>
+            <p>Saisis les adresses (départ optionnel = GPS), ton tarif ou un forfait, estime le trajet, puis ouvre Waze ou Maps pour la navigation.</p>
           </article>
           <article class="step">
             <div class="step-num" aria-hidden="true">2</div>
@@ -1037,6 +1085,39 @@
       </div>
     </section>
 
+
+    <!-- TESTEURS / GOOGLE FORM -->
+    <section id="testeurs" aria-labelledby="testeurs-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="testeurs-title">Devenir testeur</h2>
+          <p>Rejoins le programme de test fermé et essaie Tacometer avant la sortie publique.</p>
+        </div>
+        <div class="testeurs-card">
+          <p class="testeurs-intro">
+            Indique l’adresse e-mail associée à ton compte <strong>Google Play</strong> dans le formulaire ci-dessous.
+            Nous t’enverrons ensuite l’invitation au test fermé.
+          </p>
+          <p class="testeurs-note" role="note">
+            Tes données servent uniquement à t’envoyer l’invitation au test fermé (RGPD).
+          </p>
+          <div class="form-frame-wrap">
+            <iframe
+              class="form-frame"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe-KatGnAyut1plcEwF8ASEnwrIVuh8UsEJf929iLh3-j58ig/viewform?embedded=true"
+              title="Formulaire testeur Tacometer"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >Chargement du formulaire…</iframe>
+          </div>
+          <p class="form-fallback">
+            Le formulaire ne s’affiche pas&nbsp;?
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-KatGnAyut1plcEwF8ASEnwrIVuh8UsEJf929iLh3-j58ig/viewform" target="_blank" rel="noopener noreferrer">Ouvrir le formulaire</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section id="faq" aria-labelledby="faq-title">
       <div class="wrap">
@@ -1046,21 +1127,15 @@
         </div>
         <div class="faq">
           <details>
-            <summary>Est-ce un taximètre&nbsp;?</summary>
-            <p>
-              Non. Tacometer est un compteur d’aide pour chauffeurs indépendants&nbsp;: suivi GPS, tarif affiché, historique. Ce n’est <strong>pas</strong> un appareil de mesure légale ni un dispositif officiel de tarification pour une activité réglementée. Utilise-le comme outil de suivi personnel de tes courses.
-            </p>
-          </details>
-          <details>
             <summary>Comment est calculé le tarif&nbsp;?</summary>
             <p>
               Tu définis ton tarif au kilomètre et un taux horaire pour les phases à vitesse lente. Le compteur combine distance GPS et temps selon ces paramètres — ou un forfait si tu le choisis.
             </p>
           </details>
           <details>
-            <summary>Y a-t-il une carte dans l’application&nbsp;?</summary>
+            <summary>Comment naviguer pendant une course&nbsp;?</summary>
             <p>
-              Non. Pour la navigation, Tacometer propose d’ouvrir Waze ou Maps. Le focus reste sur le compteur et le suivi de la course.
+              Pour la navigation, Tacometer propose d’ouvrir Waze ou Maps. Le focus de l’app reste sur le compteur et le suivi de la course.
             </p>
           </details>
           <details>
@@ -1104,6 +1179,7 @@
             <li><a href="#fonctionnement">Fonctionnement</a></li>
             <li><a href="#compteur">Compteur</a></li>
             <li><a href="#offres">Offres</a></li>
+            <li><a href="#testeurs">Devenir testeur</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
@@ -1118,7 +1194,7 @@
       </div>
       <div class="footer-bottom">
         <p style="margin:0;">© <span id="year"></span> Tacometer. Tous droits réservés.</p>
-        <p style="margin:0;">Outil de suivi — pas un appareil de mesure légale.</p>
+        <p style="margin:0;">Compteur de course pour chauffeurs indépendants.</p>
       </div>
     </div>
   </footer>
