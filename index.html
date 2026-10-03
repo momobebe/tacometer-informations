@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tacometer — compteur de course pour chauffeurs indépendants. Distance GPS, tarif en temps réel, historique, PDF et CSV.">
+  <meta name="description"
+    content="Tacometer — compteur de course pour chauffeurs indépendants. Distance GPS, tarif en temps réel, historique, PDF et CSV.">
   <meta name="theme-color" content="#0F766E">
   <title>Tacometer — Compteur de course pour chauffeurs indépendants</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@500;600&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --teal: #0F766E;
@@ -45,9 +49,15 @@
       color-scheme: dark;
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -59,10 +69,19 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--teal); }
-    a:hover { color: var(--teal-hover); }
+    a {
+      color: var(--teal);
+    }
 
-    img { max-width: 100%; height: auto; display: block; }
+    a:hover {
+      color: var(--teal-hover);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
     :focus-visible {
       outline: none;
@@ -81,6 +100,7 @@
       text-decoration: none;
       border-radius: var(--radius-sm);
     }
+
     .skip-link:focus {
       top: 1rem;
       box-shadow: var(--focus);
@@ -144,7 +164,10 @@
       font-size: 0.95rem;
       font-weight: 500;
     }
-    .nav a:hover { color: var(--text); }
+
+    .nav a:hover {
+      color: var(--text);
+    }
 
     .header-actions {
       display: flex;
@@ -163,10 +186,22 @@
       display: grid;
       place-items: center;
     }
-    .theme-toggle:hover { border-color: var(--teal-border); }
-    .theme-toggle .icon-moon { display: none; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: none; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+
+    .theme-toggle:hover {
+      border-color: var(--teal-border);
+    }
+
+    .theme-toggle .icon-moon {
+      display: none;
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-sun {
+      display: none;
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-moon {
+      display: block;
+    }
 
     .btn {
       display: inline-flex;
@@ -183,12 +218,16 @@
       cursor: pointer;
       transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
     }
-    .btn:active { transform: translateY(1px); }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
 
     .btn-primary {
       background: var(--teal);
       color: #fff;
     }
+
     .btn-primary:hover {
       background: var(--teal-hover);
       color: #fff;
@@ -199,6 +238,7 @@
       color: var(--text);
       border-color: var(--border);
     }
+
     .btn-ghost:hover {
       border-color: var(--teal-border);
       color: var(--text);
@@ -211,10 +251,12 @@
       padding: 0.85rem 1.25rem;
       min-width: 11.5rem;
     }
+
     .btn-store:hover {
       border-color: var(--teal-border);
       color: var(--text);
     }
+
     .btn-store small {
       display: block;
       font-size: 0.7rem;
@@ -222,6 +264,7 @@
       color: var(--text-muted);
       line-height: 1.2;
     }
+
     .btn-store strong {
       display: block;
       font-size: 1rem;
@@ -240,12 +283,18 @@
     }
 
     @media (min-width: 880px) {
-      .nav { display: flex; }
+      .nav {
+        display: flex;
+      }
+
       .hero-grid {
         grid-template-columns: 1.1fr 0.9fr;
         gap: 3rem;
       }
-      .hero { padding: 4.5rem 0 3.5rem; }
+
+      .hero {
+        padding: 4.5rem 0 3.5rem;
+      }
     }
 
     .eyebrow {
@@ -368,7 +417,7 @@
     }
 
     .meter-stat {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.06);
       border-radius: 10px;
       padding: 0.65rem;
       font-size: 0.75rem;
@@ -431,7 +480,9 @@
     }
 
     @media (min-width: 720px) {
-      .steps { grid-template-columns: repeat(3, 1fr); }
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .step {
@@ -442,7 +493,9 @@
       box-shadow: var(--shadow);
     }
 
-    .alt .step { background: var(--bg); }
+    .alt .step {
+      background: var(--bg);
+    }
 
     .step-num {
       width: 2rem;
@@ -480,8 +533,14 @@
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
       }
-      .feature-split.reverse .feature-copy { order: 2; }
-      .feature-split.reverse .feature-visual { order: 1; }
+
+      .feature-split.reverse .feature-copy {
+        order: 2;
+      }
+
+      .feature-split.reverse .feature-visual {
+        order: 1;
+      }
     }
 
     .feature-list {
@@ -576,7 +635,9 @@
     }
 
     @media (min-width: 700px) {
-      .pricing { grid-template-columns: 1fr 1fr; }
+      .pricing {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .price-card {
@@ -687,7 +748,9 @@
       color: var(--text-muted);
     }
 
-    .alt .testeurs-card { background: var(--bg); }
+    .alt .testeurs-card {
+      background: var(--bg);
+    }
 
     /* FAQ */
     .faq {
@@ -714,7 +777,9 @@
       gap: 1rem;
     }
 
-    summary::-webkit-details-marker { display: none; }
+    summary::-webkit-details-marker {
+      display: none;
+    }
 
     summary::after {
       content: "+";
@@ -724,7 +789,9 @@
       line-height: 1;
     }
 
-    details[open] summary::after { content: "−"; }
+    details[open] summary::after {
+      content: "−";
+    }
 
     details p {
       margin: 0 0 1rem;
@@ -771,7 +838,10 @@
       color: var(--text-muted);
       text-decoration: none;
     }
-    .footer-grid a:hover { color: var(--teal); }
+
+    .footer-grid a:hover {
+      color: var(--teal);
+    }
 
     .footer-bottom {
       margin-top: 2rem;
@@ -797,6 +867,7 @@
     }
   </style>
 </head>
+
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
@@ -815,11 +886,15 @@
       </nav>
       <div class="header-actions">
         <button type="button" class="theme-toggle" id="themeToggle" aria-label="Basculer le thème clair ou sombre">
-          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
           </svg>
-          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" aria-hidden="true">
+            <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z" />
           </svg>
         </button>
         <a class="btn btn-primary" href="#testeurs">Devenir testeur</a>
@@ -835,15 +910,22 @@
           <p class="eyebrow">Pour chauffeurs indépendants</p>
           <h1 id="hero-title">Suis ta course. Affiche le tarif. Garde la trace.</h1>
           <p class="lead">
-            Tacometer est un compteur mobile&nbsp;: distance GPS, tarif au km et au temps lent, pause, historique, PDF et CSV — simple et clair pour tes courses.
+            Tacometer est un compteur mobile&nbsp;: distance GPS, tarif au km et au temps lent, pause, historique, PDF
+            et CSV — simple et clair pour tes courses.
           </p>
           <div class="store-row" id="telechargement">
             <a class="btn btn-store" href="#" aria-label="Télécharger sur l’App Store (lien à venir)">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 2.2c-.9.1-2 .7-2.6 1.5-.6.7-1.1 1.8-.9 2.8 1 .1 2-.5 2.6-1.3.6-.8 1-1.9.9-3zM19.8 17.3c-.6 1.3-.9 1.9-1.7 3-.9 1.3-2.1 2.9-3.6 2.9-1.3 0-1.7-.8-3.4-.8s-2.2.8-3.4.8c-1.5 0-2.6-1.4-3.5-2.7C2.3 17.7 1 13.4 2.8 10.5c.9-1.5 2.4-2.4 4-2.4 1.6 0 2.6.9 3.9.9 1.2 0 2-.9 3.9-.9 1.4 0 2.9.8 3.8 2.1-3.3 1.8-2.8 6.6.4 7.1z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M16.5 2.2c-.9.1-2 .7-2.6 1.5-.6.7-1.1 1.8-.9 2.8 1 .1 2-.5 2.6-1.3.6-.8 1-1.9.9-3zM19.8 17.3c-.6 1.3-.9 1.9-1.7 3-.9 1.3-2.1 2.9-3.6 2.9-1.3 0-1.7-.8-3.4-.8s-2.2.8-3.4.8c-1.5 0-2.6-1.4-3.5-2.7C2.3 17.7 1 13.4 2.8 10.5c.9-1.5 2.4-2.4 4-2.4 1.6 0 2.6.9 3.9.9 1.2 0 2-.9 3.9-.9 1.4 0 2.9.8 3.8 2.1-3.3 1.8-2.8 6.6.4 7.1z" />
+              </svg>
               <span><small>Bientôt sur</small><strong>App Store</strong></span>
             </a>
             <a class="btn btn-store" href="#" aria-label="Télécharger sur Google Play (lien à venir)">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.2 2.4c-.3.2-.5.6-.5 1.1v17c0 .5.2.9.5 1.1l9.6-9.6L3.2 2.4zm11.2 6.5L5.6 1.3l11.4 6.5-2.6 1.1zM5.6 22.7l8.8-7.6 2.6 1.5L5.6 22.7zm13.5-7.8 2.1-1.2c.7-.4.7-1.5 0-1.9l-2.1-1.2-2.4 2.2 2.4 2.1z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M3.2 2.4c-.3.2-.5.6-.5 1.1v17c0 .5.2.9.5 1.1l9.6-9.6L3.2 2.4zm11.2 6.5L5.6 1.3l11.4 6.5-2.6 1.1zM5.6 22.7l8.8-7.6 2.6 1.5L5.6 22.7zm13.5-7.8 2.1-1.2c.7-.4.7-1.5 0-1.9l-2.1-1.2-2.4 2.2 2.4 2.1z" />
+              </svg>
               <span><small>Bientôt sur</small><strong>Google Play</strong></span>
             </a>
           </div>
@@ -879,17 +961,20 @@
           <article class="step">
             <div class="step-num" aria-hidden="true">1</div>
             <h3>Avant la course</h3>
-            <p>Saisis les adresses (départ optionnel = GPS), ton tarif ou un forfait, estime le trajet, puis ouvre Waze ou Maps pour la navigation.</p>
+            <p>Saisis les adresses (départ optionnel = GPS), ton tarif ou un forfait, estime le trajet, puis ouvre Waze
+              ou Maps pour la navigation.</p>
           </article>
           <article class="step">
             <div class="step-num" aria-hidden="true">2</div>
             <h3>Pendant</h3>
-            <p>Compteur plein écran, prix en direct, Pause / Reprendre / Stop. Notification hors app avec le montant. GPS en arrière-plan. Option écran allumé.</p>
+            <p>Compteur plein écran, prix en direct, Pause / Reprendre / Stop. Notification hors app avec le montant.
+              GPS en arrière-plan. Option écran allumé.</p>
           </article>
           <article class="step">
             <div class="step-num" aria-hidden="true">3</div>
             <h3>Après</h3>
-            <p>Enregistre la course, ajoute un paiement ou un pourboire si besoin, exporte en PDF, retrouve tout dans l’historique.</p>
+            <p>Enregistre la course, ajoute un paiement ou un pourboire si besoin, exporte en PDF, retrouve tout dans
+              l’historique.</p>
           </article>
         </div>
       </div>
@@ -901,35 +986,42 @@
         <div class="feature-copy">
           <div class="section-head">
             <h2 id="meter-title">Un compteur lisible en un coup d’œil</h2>
-            <p>Pendant la course, l’essentiel reste à l’écran&nbsp;: montant live, distance GPS, contrôles Pause / Reprendre / Stop.</p>
+            <p>Pendant la course, l’essentiel reste à l’écran&nbsp;: montant live, distance GPS, contrôles Pause /
+              Reprendre / Stop.</p>
           </div>
           <ul class="feature-list">
             <li>
               <span class="check" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
               </span>
               Tarif au kilomètre + taux horaire en vitesse lente
             </li>
             <li>
               <span class="check" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
               </span>
               Mode plein écran pensé pour le regard rapide
             </li>
             <li>
               <span class="check" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
               </span>
               GPS en arrière-plan pour suivre la distance
             </li>
           </ul>
         </div>
         <div class="feature-visual">
-          <div class="device-card">
-            <figure class="placeholder" role="img" aria-label="Emplacement pour capture d’écran du compteur en course">
-              <strong>Capture — compteur en course</strong>
-              <span>Remplacer par une capture Flutter (plein écran compteur)</span>
-              <code>assets/capture-course.png</code>
+          <div class="device-card" style="width:min(70%, 22rem);margin-inline:auto;">
+            <figure class="shadow" role="img" aria-label="Emplacement pour capture d’écran compteur en course">
+              <img src="assets/capture-course.png" alt="Compteur en course"
+                style="display:block;width:100%;height:auto;border-radius:1.25rem;box-shadow:0 1rem 2.5rem rgb(0 0 0 / 18%);"
+                loading="lazy" />
             </figure>
           </div>
         </div>
@@ -942,24 +1034,31 @@
         <div class="feature-copy">
           <div class="section-head">
             <h2 id="notif-title">Contrôle hors app, sans perdre le fil</h2>
-            <p>La notification affiche le montant et propose Pause, Reprendre ou Stop. Active l’option «&nbsp;garder l’écran allumé&nbsp;» si tu préfères tout laisser visible.</p>
+            <p>La notification affiche le montant et propose Pause, Reprendre ou Stop. Active l’option «&nbsp;garder
+              l’écran allumé&nbsp;» si tu préfères tout laisser visible.</p>
           </div>
           <ul class="feature-list">
             <li>
               <span class="check" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
               </span>
               Notification discrète avec montant en direct
             </li>
             <li>
               <span class="check" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
               </span>
               Actions Pause / Reprendre / Stop depuis la notif
             </li>
             <li>
               <span class="check" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
               </span>
               Option garder l’écran allumé pendant la course
             </li>
@@ -977,7 +1076,8 @@
               </div>
               <div class="notif-actions"><span>Pause</span><span>Reprendre</span><span>Stop</span></div>
             </div>
-            <figure class="placeholder" style="aspect-ratio:16/10;max-height:none;margin-top:1rem;" role="img" aria-label="Emplacement pour capture d’écran notification et pause">
+            <figure class="placeholder" style="aspect-ratio:16/10;max-height:none;margin-top:1rem;" role="img"
+              aria-label="Emplacement pour capture d’écran notification et pause">
               <strong>Capture — notif / pause</strong>
               <span>Remplacer par une capture notification + contrôles</span>
               <code>assets/capture-pause.png</code>
@@ -993,24 +1093,31 @@
         <div class="feature-copy">
           <div class="section-head">
             <h2 id="history-title">Historique, PDF et CSV</h2>
-            <p>Chaque course enregistrée reste accessible. Exporte un PDF pour le client, ou un CSV pour ta compta — clair et concret.</p>
+            <p>Chaque course enregistrée reste accessible. Exporte un PDF pour le client, ou un CSV pour ta compta —
+              clair et concret.</p>
           </div>
           <ul class="feature-list">
             <li>
               <span class="check" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
               </span>
               Historique des courses sauvegardées
             </li>
             <li>
               <span class="check" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
               </span>
               Export PDF et CSV (Premium)
             </li>
             <li>
               <span class="check" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
               </span>
               Paiement et pourboire optionnels à la fin
             </li>
@@ -1041,15 +1148,24 @@
             <p class="price-tag">Sans engagement · idéal pour tester</p>
             <ul>
               <li>
-                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg></span>
                 Compteur &amp; courses illimités
               </li>
               <li>
-                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg></span>
                 10 sauvegardes / mois
               </li>
               <li>
-                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg></span>
                 Notification &amp; contrôles Pause / Stop
               </li>
             </ul>
@@ -1060,23 +1176,38 @@
             <p class="price-tag">Plus de sauvegardes et d’outils pro</p>
             <ul>
               <li>
-                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg></span>
                 Plus de sauvegardes
               </li>
               <li>
-                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg></span>
                 Clients, réservations &amp; rappels
               </li>
               <li>
-                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg></span>
                 Suivi du chiffre d’affaires (CA)
               </li>
               <li>
-                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg></span>
                 Export PDF &amp; CSV
               </li>
               <li>
-                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span class="check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg></span>
                 Infos entreprise sur les documents
               </li>
             </ul>
@@ -1102,17 +1233,15 @@
             Tes données servent uniquement à t’envoyer l’invitation au test fermé (RGPD).
           </p>
           <div class="form-frame-wrap">
-            <iframe
-              class="form-frame"
+            <iframe class="form-frame"
               src="https://docs.google.com/forms/d/e/1FAIpQLSe-KatGnAyut1plcEwF8ASEnwrIVuh8UsEJf929iLh3-j58ig/viewform?embedded=true"
-              title="Formulaire testeur Tacometer"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            >Chargement du formulaire…</iframe>
+              title="Formulaire testeur Tacometer" loading="lazy" referrerpolicy="no-referrer-when-downgrade">Chargement
+              du formulaire…</iframe>
           </div>
           <p class="form-fallback">
             Le formulaire ne s’affiche pas&nbsp;?
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-KatGnAyut1plcEwF8ASEnwrIVuh8UsEJf929iLh3-j58ig/viewform" target="_blank" rel="noopener noreferrer">Ouvrir le formulaire</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-KatGnAyut1plcEwF8ASEnwrIVuh8UsEJf929iLh3-j58ig/viewform"
+              target="_blank" rel="noopener noreferrer">Ouvrir le formulaire</a>
           </p>
         </div>
       </div>
@@ -1129,19 +1258,22 @@
           <details>
             <summary>Comment est calculé le tarif&nbsp;?</summary>
             <p>
-              Tu définis ton tarif au kilomètre et un taux horaire pour les phases à vitesse lente. Le compteur combine distance GPS et temps selon ces paramètres — ou un forfait si tu le choisis.
+              Tu définis ton tarif au kilomètre et un taux horaire pour les phases à vitesse lente. Le compteur combine
+              distance GPS et temps selon ces paramètres — ou un forfait si tu le choisis.
             </p>
           </details>
           <details>
             <summary>Comment naviguer pendant une course&nbsp;?</summary>
             <p>
-              Pour la navigation, Tacometer propose d’ouvrir Waze ou Maps. Le focus de l’app reste sur le compteur et le suivi de la course.
+              Pour la navigation, Tacometer propose d’ouvrir Waze ou Maps. Le focus de l’app reste sur le compteur et le
+              suivi de la course.
             </p>
           </details>
           <details>
             <summary>Que se passe-t-il si je quitte l’app pendant une course&nbsp;?</summary>
             <p>
-              Le GPS peut continuer en arrière-plan. Une notification affiche le montant et permet Pause, Reprendre ou Stop sans rouvrir l’app.
+              Le GPS peut continuer en arrière-plan. Une notification affiche le montant et permet Pause, Reprendre ou
+              Stop sans rouvrir l’app.
             </p>
           </details>
           <details>
@@ -1153,7 +1285,8 @@
           <details>
             <summary>Quelle est la différence Gratuit / Premium&nbsp;?</summary>
             <p>
-              Gratuit&nbsp;: compteur et courses illimités, 10 sauvegardes par mois. Premium&nbsp;: davantage de sauvegardes, clients, réservations et rappels, suivi du CA, PDF, CSV et infos entreprise.
+              Gratuit&nbsp;: compteur et courses illimités, 10 sauvegardes par mois. Premium&nbsp;: davantage de
+              sauvegardes, clients, réservations et rappels, suivi du CA, PDF, CSV et infos entreprise.
             </p>
           </details>
         </div>
@@ -1186,9 +1319,13 @@
         <div>
           <h3>Légal</h3>
           <ul>
-            <li><a href="#">CGU <span class="visually-hidden">(à remplacer)</span></a> — <em style="font-style:normal;opacity:.7;">placeholder</em></li>
-            <li><a href="#">Politique de confidentialité / RGPD <span class="visually-hidden">(à remplacer)</span></a> — <em style="font-style:normal;opacity:.7;">placeholder</em></li>
-            <li><a href="#">Mentions légales <span class="visually-hidden">(à remplacer)</span></a> — <em style="font-style:normal;opacity:.7;">placeholder</em></li>
+            <li><a href="#">CGU <span class="visually-hidden">(à remplacer)</span></a> — <em
+                style="font-style:normal;opacity:.7;">placeholder</em></li>
+            <li><a href="#">Politique de confidentialité / RGPD <span class="visually-hidden">(à remplacer)</span></a> —
+              <em style="font-style:normal;opacity:.7;">placeholder</em>
+            </li>
+            <li><a href="#">Mentions légales <span class="visually-hidden">(à remplacer)</span></a> — <em
+                style="font-style:normal;opacity:.7;">placeholder</em></li>
           </ul>
         </div>
       </div>
@@ -1238,4 +1375,5 @@
     })();
   </script>
 </body>
+
 </html>
